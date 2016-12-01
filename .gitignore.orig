@@ -13,13 +13,9 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
-tmp*
 !/log/.keep
-!/tmp/.keep
-
-# Ignore Byebug command history file.
-.byebug_history
+/tmp
+tmp*
 
 # Ignore all editor droppings
 *~
