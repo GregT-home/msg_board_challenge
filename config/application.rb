@@ -1,3 +1,4 @@
+require_relative '../env'   # Define general default values
 require_relative 'boot'
 
 require 'rails/all'
