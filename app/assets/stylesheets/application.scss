@@ -1,0 +1,15 @@
+@import "bootstrap";
+header {
+  h1.logo {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 5rem;
+  }
+}
+.flash-alert {
+  color: red;
+}
+.flash-notice {
+  color: green;
+}
