@@ -6,20 +6,23 @@ This is a message board system where posts are on the front page and one clicks 
 
 Basic implementation will be in phases.
 
-# Create a new rails app with a static home page
-# Install Devise
-# Make it pretty with Bootstrap
-# Add pages to create and look at individual posts
-# Make a posts index page
-# Add replying
-# Inline replying on a post
-# Other features of your choice
+* Create a new rails app with a static home page
+* Install Devise
+* Make it pretty with Bootstrap
+* Add pages to create and look at individual posts
+* Make a posts index page
+* Add replying
+* Inline replying on a post
+* Other features of your choice
 
-ss# Background
+# Background
 
-## Requirements
+## System Dependencies
 
-Implementaion is in Rails 5 with Bootstrap 4, SASS, SLIM.
+* Ruby 2.3.3
+* Rails 5
+* Bootstrap V4
+* Slim (templating language)
 
 Tests are in Rspec and Spinach.
 
@@ -35,6 +38,8 @@ The Trello board for this project can be found [at this link](https://trello.com
 # Testing the app
 This application has a set of rspec tests for the models and spinach tests for the end to end operations that you can run to validate operation and get some description of structure and operation.
 
-* ```bundle exec rspec --color --format documentation```
-* ```bundle exec spinach```
+* ```RAILS_ENV=test rake```
+* ```RAILS_ENV=test rails spinach```
+* ```RAILS_ENV=test rails spec```
+
 

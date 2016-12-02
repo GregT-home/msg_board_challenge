@@ -3,13 +3,17 @@ html
   head
     title = yield :title
 
+    = favicon_link_tag 'favicon.32px.ico'
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
 
-    = if current_user
-      p.identity Logged in as: #{current_user.name}
-    p.flash.notice = notice
-    p.flash.alert = alert
-    = yield
+  body
+    = render partial: 'layouts/header'
+
+    .container
+      - flash.each do |msg_type, msg|
+        = content_tag :span, ((Rails.env.test? || Rails.env.development?) ? "#{msg_type}: " + msg : msg), class: "flash-#{msg_type}"
+
+      = yield
+
