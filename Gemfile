@@ -10,10 +10,23 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+  gem 'spinach-rails'
+  gem 'faker'        # enable creation of fake data in factories
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
 end
 
 group :development do

@@ -21,6 +21,9 @@ tmp*
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore personal overrides file
+.env_overrides.rb
+
 # Ignore all editor droppings
 *~
 *.vim
