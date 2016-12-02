@@ -1,2 +1,17 @@
 = provide :title, "Message Board"
-H1 Welcome to the Message Board
+.container
+  h1 Welcome
+  - unless current_user
+    h2
+      = link_to "Login", new_user_session_path
+  - if current_user
+    h2 Latest Posts
+    - if Posting.count > 0
+      - Posting.take(20).each do |posting|
+        .col-md-12
+          ol.postings
+            li [id="posting-#{posting.id}"]
+              p.user      = link_to posting.user.name, posting.user
+              p.content   #{posting.content}
+              p.timestamp Posted #{time_ago_in_words(posting.created_at)} ago
+

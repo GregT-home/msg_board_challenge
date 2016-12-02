@@ -17,7 +17,7 @@ module Helpers
   end
 
   def has_flash_msg(severity: , containing: )
-    expect(page.find(".flash.#{severity.to_s}").text).to match(/.*#{containing}.*/i)
+    expect(page.find(".flash-#{severity.to_s}").text).to match(/.*#{containing}.*/i)
   end
 
   private

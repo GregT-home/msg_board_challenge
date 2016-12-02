@@ -1,0 +1,9 @@
+= provide :title, @user.name
+.row
+  aside.col-md-3
+    = render 'shared/user_info'
+
+  .col-md-9
+    - @user.postings.any?
+      ol.postings
+        = render @postings

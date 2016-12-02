@@ -6,11 +6,11 @@ Feature: Sign-In
 
   Scenario: A user can sign into the system with registered email and password
     Given I am not signed in
-    When I enter a registered email
+    When I enter my registered email
     And I enter the associated password
     And I click Sign In
     Then I am sent to the Root page
-    And I see the new user name
+    And I see my user name
     And I see a success message containing "Signed in successfully"
 
   Scenario: A user cannot sign into the system with an unregistered email or password
@@ -19,7 +19,7 @@ Feature: Sign-In
     And I enter an invalid password
     And I click Sign In
     Then I see an alert containing "Invalid email or password"
-    When I enter a registered email
+    When I enter my registered email
     And I enter an invalid password
     And I click Sign In
     Then I see an alert containing "Invalid email or password"

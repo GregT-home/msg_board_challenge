@@ -1,0 +1,4 @@
+li [id="posting-#{posting.id}"]
+  p.user      = link_to posting.user.name, posting.user
+  p.content   #{posting.content}
+  p.timestamp Posted #{time_ago_in_words(posting.created_at)} ago
