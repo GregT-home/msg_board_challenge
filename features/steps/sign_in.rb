@@ -6,8 +6,8 @@ class Spinach::Features::SignIn < Spinach::FeatureSteps
     expect(page.title).to eq("Sign In")
   end
 
-  step 'I am sent to the Postings' do
-    expect(page.title).to eq("Postings")
+  step 'I am sent to the Root page' do
+    expect(page.title).to eq("Message Board")
   end
 
   step 'I enter my registered email' do
@@ -40,7 +40,7 @@ class Spinach::Features::SignIn < Spinach::FeatureSteps
     has_flash_msg(severity: :alert, containing: "Invalid email or password")
   end
 
-  step 'I see the my user name' do
+  step 'I see my user name' do
     expect(page).to have_content(@user.name)
   end
 end

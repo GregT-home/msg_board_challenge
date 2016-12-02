@@ -9,7 +9,7 @@ Feature: Sign-In
     When I enter my registered email
     And I enter the associated password
     And I click Sign In
-    Then I am sent to my Postings page
+    Then I am sent to the Root page
     And I see my user name
     And I see a success message containing "Signed in successfully"
 

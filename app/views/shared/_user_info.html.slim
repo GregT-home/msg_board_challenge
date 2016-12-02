@@ -1,0 +1,8 @@
+.card
+  .card-block
+    h4.card-title #{@user.name}
+    p.card-text #{@user.email}
+    -if @user.postings.any?
+      p.card-text Postings: #{@postings.count}
+    - if @user == current_user
+      = link_to "Create Post", new_user_posting_path(@user), class: "btn btn-secondary"
