@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.3'
+
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -38,5 +40,6 @@ group :development do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
