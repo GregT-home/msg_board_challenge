@@ -6,11 +6,11 @@ class Spinach::Features::SignIn < Spinach::FeatureSteps
     expect(page.title).to eq("Sign In")
   end
 
-  step 'I am sent to the Root page' do
-    expect(page.title).to eq("Message Board")
+  step 'I am sent to the Postings' do
+    expect(page.title).to eq("Postings")
   end
 
-  step 'I enter a registered email' do
+  step 'I enter my registered email' do
     @user = FactoryGirl.create(:user, password: STARTER_PASSWORD)
     fill_in("user_email", with: @user.email)
   end
@@ -40,7 +40,7 @@ class Spinach::Features::SignIn < Spinach::FeatureSteps
     has_flash_msg(severity: :alert, containing: "Invalid email or password")
   end
 
-  step 'I see the new user name' do
+  step 'I see the my user name' do
     expect(page).to have_content(@user.name)
   end
 end

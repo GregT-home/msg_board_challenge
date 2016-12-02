@@ -9,11 +9,10 @@ class Spinach::Features::SignOut < Spinach::FeatureSteps
   step 'I navigate to Sign Out' do
     visit destroy_user_session_path
     sync_page
-    expect(page.title).to eq("Sign In")
   end
 
-  step 'I am sent to the Sign In page' do
-    expect(page.title).to eq("Sign In")
+  step 'I am sent to the Root page' do
+    expect(page.title).to eq("Message Board")
   end
 
   step 'I see a success message containing "Signed out successfully"' do
