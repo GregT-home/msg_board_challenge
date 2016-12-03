@@ -15,5 +15,5 @@ html
       - flash.each do |msg_type, msg|
         = content_tag :span, ((Rails.env.test? || Rails.env.development?) ? "#{msg_type}: " + msg : msg), class: "flash-#{msg_type}"
 
-      = yield
+    = yield
 
