@@ -1,0 +1,13 @@
+= provide :title, "User List"
+.col-md-6
+  table.table.table-striped
+    tbody
+      th Postings
+      th Userid/Email
+      th Name
+      - @users.order(:email).each do |user|
+        tr
+          td #{user.postings.count}
+          td #{user.email}
+          td #{user.name}
+
