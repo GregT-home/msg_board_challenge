@@ -7,7 +7,9 @@ header
 
     .navbar-nav.float-xs-right
       - if current_user
-        button.btn.btn-secondary-outline type="button"
+        button.btn.btn-outline-secondary> type="button"
+          = link_to "User List", users_path
+        button.btn.btn-outline-secondary type="button"
           = link_to "Sign Out", destroy_user_session_path
 
       - if current_user
