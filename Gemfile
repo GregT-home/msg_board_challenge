@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'faker'        # enable creation of fake data in factories
 
 group :development, :test do
   gem 'sqlite3'
@@ -20,7 +21,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'spinach-rails'
-  gem 'faker'        # enable creation of fake data in factories
 end
 
 group :test do
