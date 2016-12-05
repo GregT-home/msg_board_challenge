@@ -1,0 +1,9 @@
+= provide :title, 'Reply'
+.container
+  H2 Reply
+  = form_for [@posting, @reply] do |f|
+    .field
+      = f.text_area :content, placeholder: 'Compose your reply...',
+        size: '60x12',
+        autofocus: true
+    = f.submit 'Send', class: 'btn btn-primary'

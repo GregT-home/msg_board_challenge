@@ -1,0 +1,4 @@
+li [id="reply-#{reply.id}"]
+  p.user      = link_to reply.user.name, reply.user
+  p.content   #{reply.content}
+  p.timestamp Posted #{time_ago_in_words(posting.created_at)} ago
