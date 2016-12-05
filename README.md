@@ -4,16 +4,13 @@
 
 This is a message board system where posts are on the front page and one clicks through to see the original post with the discussion displayed below.
 
-Basic implementation will be in phases.
+The program has the following featues:
 
-* Create a new rails app with a static home page
-* Install Devise
-* Make it pretty with Bootstrap
-* Add pages to create and look at individual posts
-* Make a posts index page
-* Add replying
-* Inline replying on a post
-* Other features of your choice
+* Self-serve user sign-up, sign-in, and sign-out
+* Latest postings displayed on main page
+* User postings displayed on User Profile pages
+* Postings can be replied to by any user
+* A list of Users can be displayed
 
 # Background
 
@@ -38,8 +35,12 @@ The Trello board for this project can be found [at this link](https://trello.com
 # Testing the app
 This application has a set of rspec tests for the models and spinach tests for the end to end operations that you can run to validate operation and get some description of structure and operation.
 
-* ```RAILS_ENV=test rake```
-* ```RAILS_ENV=test rails spinach```
-* ```RAILS_ENV=test rails spec```
+command | action
+------- | ------
+`RAILS_ENV=test rake` | run all tests
+`rspec` | unit tests only
+`spinach` | end-to-end tests only
 
+Both `rspec` and `spinach` tests can be run individually by specifying the name of the test file as an argument to the command.
 
+Both `rspec` and `spinach` commands may need to be prefaced with `bundle exec` to ensure the proper versions are run.
