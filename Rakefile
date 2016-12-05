@@ -4,3 +4,10 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+task :test_environment do
+  ENV['RAILS_ENV'] = 'test'
+end
+
+task spec: [:test_environment]
+task spinach: [:test_environment]

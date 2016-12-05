@@ -1,10 +1,13 @@
 ENV['RAILS_ENV'] = 'test'
-require './config/environment'
-
-# require 'minitest/spec'
+puts "RAILS_ENV is set to #{ENV['RAILS_ENV']}"
+raise MustBeTest unless ENV['RAILS_ENV'] == 'test'  # bug workaround
+require 'spinach-rails'
+require_relative '../../config/environment'
 require 'rspec/rails'
-
+require 'capybara/poltergeist'
 require 'database_cleaner'
+
+
 DatabaseCleaner.strategy = :truncation
 
 # Clean the DB before starting so we can examine the DB after failures.
