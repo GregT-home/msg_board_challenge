@@ -1,13 +1,13 @@
 = provide :title, "User List"
 .col-md-6
-  table.table.table-striped
+  table.table.table-striped.user-list
     tbody
       th Postings
       th Userid/Email
       th Name
       - @users.order(:email).each do |user|
-        tr
-          td #{user.postings.count}
-          td #{user.email}
-          td = link_to "#{(user.name) ? user.name : "- not given -"}", user_path(user.id)
+        tr [id="user-#{user.id}"]
+          td.postings #{user.postings.count}
+          td.email #{user.email}
+          td.name = link_to "#{(user.name) ? user.name : "- not given -"}", user_path(user.id)
 

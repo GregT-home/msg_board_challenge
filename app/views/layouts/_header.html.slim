@@ -5,7 +5,7 @@ header
         = image_tag "banner_logo", alt: "Msg Board"
       | Message Board
 
-    .navbar-nav.float-xs-right
+    .navbar-nav.float-xs-right.actions
       - if current_user
         button.btn.btn-outline-secondary> type="button"
           = link_to "User List", users_path
@@ -13,7 +13,7 @@ header
           = link_to "Sign Out", destroy_user_session_path
 
       - if current_user
-        p
+        p.username
           | user:
           - if current_user.name
             =< link_to "#{current_user.name}", user_path(current_user)
