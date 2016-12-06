@@ -5,8 +5,8 @@
     h2
       = link_to "Login", new_user_session_path
   - if current_user && Posting.count > 0
-    h2 Last #{latest_posts} Posts
+    h2 Last #{latest_count} Posts
     .col-md-12
       ol.postings
-        - Posting.order(created_at: :desc).take(latest_posts).each do |posting|
+        - latest_postings.each do |posting|
           = render 'shared/posting', posting: posting
