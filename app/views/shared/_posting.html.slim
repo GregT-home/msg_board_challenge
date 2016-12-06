@@ -1,0 +1,19 @@
+li [id="posting-#{posting.id}"]
+  .card
+    .card-block
+      p.user      = link_to posting.user.name, posting.user
+      p.content   #{posting.content}
+      p.actions
+        span.timestamp Posted #{time_ago_in_words(posting.created_at)} ago
+        span<
+          = link_to "Reply", new_posting_reply_path(posting), class: "btn btn-outline-primary btn-sm"
+      - reply_count = Reply.where(posting_id: posting.id).count
+      - if reply_count > 0
+          - Reply.where(posting_id: posting.id).each do |reply|
+            .card
+              .card-block
+                div [id="reply-#{reply.id}"]
+                  p.user      = link_to reply.user.name, reply.user
+                  p.content   #{reply.content}
+                  p.actions
+                    span.timestamp Posted #{time_ago_in_words(reply.created_at)} ago

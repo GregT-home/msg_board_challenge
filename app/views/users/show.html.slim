@@ -6,4 +6,5 @@
   .col-md-9
     - @user.postings.any?
       ol.postings
-        = render @postings
+        - @postings.each do |posting|
+          = render 'shared/posting', posting: posting
