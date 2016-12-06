@@ -5,4 +5,4 @@
     -if @user.postings.any?
       p.card-text Postings: #{@postings.count}
     - if @user == current_user
-      = link_to "Create Post", new_user_posting_path(@user), class: "btn btn-secondary"
+      = link_to "Create Post", new_posting_path, class: "btn btn-secondary"
