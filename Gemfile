@@ -12,7 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'faker'        # enable creation of fake data in factories
 
 group :development, :test do
